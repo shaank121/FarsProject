@@ -1,0 +1,48 @@
+---
+title: "Fars_vignette"
+author: "Ankit Sharma"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{FARS Package Usage }
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo = FALSE, include = FALSE}
+library(FarsProject)
+library(dplyr)
+library(maps)
+library(tidyr)
+```
+
+This is overview of FARS PAckage and its usage .This package contain function to read the FARS data and do analysis on accident in a given year. 
+## Functions
+
+- `fars_read()`
+- `fars_summarize_years()`
+- `fars_map_state()`
+
+## Reading a file
+
+```{r fars_read_example}
+filename <- system.file("extdata", "accident_2013.csv.bz2", package = "FarsProject") 
+fars_read(filename)
+```
+
+## Usage of Fars_summarize_years function 
+
+```{r fars_summarize_years_example }
+
+setwd(system.file("extdata", package = "FarsProject"))
+fars_summarize_years(2013)
+```
+
+## Usage of Fars_map_state
+
+```{r fars_map_state_example}
+setwd(system.file("extdata", package = "FarsProject"))
+fars_map_state(20, 2013)
+```
+
+

@@ -1,0 +1,17 @@
+Package: FarsProject
+Type: Package
+Title: Fars Package 
+Version: 0.1.0
+Author: Ankit Sharma <shaank121@gmail.com>
+Maintainer: Ankit Sharma <shaank121@gmail.com>
+Description: Performs Analysis on Fatality Analysis and Reporting System(FARS) file
+License: GPL (>=2)
+Encoding: UTF-8
+LazyData: true
+URL: https://githib.com/shaank121/FarsProject
+RoxygenNote: 6.0.1
+Suggests: knitr,
+    rmarkdown,
+  testthat
+VignetteBuilder: knitr
+Depends: dplyr,magrittr,maps,readr,tidyr
