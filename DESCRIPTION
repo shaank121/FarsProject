@@ -6,12 +6,18 @@ Author: Ankit Sharma <shaank121@gmail.com>
 Maintainer: Ankit Sharma <shaank121@gmail.com>
 Description: Performs Analysis on Fatality Analysis and Reporting System(FARS) file
 License: GPL (>=2)
+Imports:
+    dplyr,
+    tidyr,
+    readr,
+    maps
+Depends:
+    R (>= 3.1.0)
 Encoding: UTF-8
 LazyData: true
-URL: https://githib.com/shaank121/FarsProject
+URL: https://githi  b.com/shaank121/FarsProject
 RoxygenNote: 6.0.1
 Suggests: knitr,
     rmarkdown,
   testthat
 VignetteBuilder: knitr
-Depends: dplyr,magrittr,maps,readr,tidyr
