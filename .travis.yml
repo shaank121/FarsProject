@@ -3,3 +3,6 @@
 language: R
 sudo: false
 cache: packages
+script:
+- bundle exec rake build
+- bundle exec rake builddoc
