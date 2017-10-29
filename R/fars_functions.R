@@ -55,6 +55,7 @@ make_filename <- function(year) {
 #'
 #' @importFrom dplyr select mutate
 #' @importFrom readr read_csv
+#' @importFrom tidyr %>%
 #'
 fars_read_years <- function(years) {
   lapply(years, function(year) {
