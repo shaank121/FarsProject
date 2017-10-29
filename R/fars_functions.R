@@ -83,7 +83,7 @@ fars_read_years <- function(years) {
 #' fars_summarize_years(2013)
 #'
 #' @importFrom dplyr summarize bind_rows group_by summarise
-#' @importFrom magrittr %>%
+#'
 #' @importFrom readr read_csv
 #' @importFrom tidyr spread
 #'
