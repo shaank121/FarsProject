@@ -33,9 +33,9 @@ fars_read(filename)
 ## Usage of Fars_summarize_years function 
 
 ```{r fars_summarize_years_example }
-
 setwd(system.file("extdata", package = "FarsProject"))
-fars_summarize_years(2013)
+years <- c(2013) 
+fars_summarize_years(years)
 ```
 
 ## Usage of Fars_map_state

@@ -1,3 +1,4 @@
+MONTH <-STATE <- year <- n <- NULL
 #' Read file of Fatality Analysis and Reporting System
 #'
 #' This function reads the file as csv as a dataframe and prompt error if file does not existi
@@ -55,10 +56,9 @@ make_filename <- function(year) {
 #'
 #' @importFrom dplyr select mutate
 #' @importFrom readr read_csv
-#' @importFrom tidyr %>%
 #'
 fars_read_years <- function(years) {
-  lapply(years, function(year) {
+    lapply(years, function(year) {
     file <- make_filename(year)
     tryCatch({
       dat <- fars_read(file)
@@ -76,7 +76,7 @@ fars_read_years <- function(years) {
 #'
 #' It summarizes the monthly accident in a given year
 #'
-#' @param year -year for which summarization need to be done
+#' @param years -year for which summarization need to be done
 #' @return return N X 2 dataframe with month and number of accident
 #'
 #' @examples
@@ -84,12 +84,12 @@ fars_read_years <- function(years) {
 #' fars_summarize_years(2013)
 #'
 #' @importFrom dplyr summarize bind_rows group_by summarise
-#'
 #' @importFrom readr read_csv
-#' @importFrom tidyr spread %>%
+#' @import tidyr
 #'
 #' @export
 fars_summarize_years <- function(years) {
+
   dat_list <- fars_read_years(years)
   dplyr::bind_rows(dat_list) %>%
     dplyr::group_by(year, MONTH) %>%
@@ -100,8 +100,8 @@ fars_summarize_years <- function(years) {
 
 #' Plot accident for given state in a given year
 #' This function plots the accident in a given state for a given year.
-#' @param unique state number - numeric
-#' @param valid year - numeric
+#' @param  state.num - numeric
+#' @param year - numeric
 #'
 #' @return
 #' 1. plotted map of accident for the year

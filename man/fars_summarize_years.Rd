@@ -7,7 +7,7 @@
 fars_summarize_years(years)
 }
 \arguments{
-\item{year}{-year for which summarization need to be done}
+\item{years}{-year for which summarization need to be done}
 }
 \value{
 return N X 2 dataframe with month and number of accident

@@ -8,9 +8,9 @@ This function plots the accident in a given state for a given year.}
 fars_map_state(state.num, year)
 }
 \arguments{
-\item{unique}{state number - numeric}
+\item{state.num}{- numeric}
 
-\item{valid}{year - numeric}
+\item{year}{- numeric}
 }
 \value{
 1. plotted map of accident for the year
